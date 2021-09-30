@@ -1,0 +1,16 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["mark@fastly.com"]
+description = "A basic starter kit that demonstrates routing, simple synthetic responses and overriding caching rules."
+language = "javascript"
+manifest_version = 1
+name = "hack21"
+service_id = "16Xj7JlX5TqVmzn1KvAv9w"
+
+[local_server]
+
+  [local_server.backends]
+
+    [local_server.backends.google_docs]
+      url = "https://docs.google.com/"
