@@ -90,12 +90,12 @@ const getAllPosts = async (id, host) => {
 }
 
 /* ::: Get a single post ::: */
-const getSinglePost = async (id, slug) => {
+const getSinglePost = async (id, host, slug) => {
     console.log('getSinglePost()');
     //  const title = slug.replace(/\+/g,' ');
 
     /* ::: Really what we're doing here is getting all the posts, then narrowing it down to just one ::: */
-    const posts = await getAllPosts(id);
+    const posts = await getAllPosts(id, host);
     //return posts.find(post => post.title == title);
     return posts.find(post => post.slug == slug);
 }

@@ -99,7 +99,7 @@ async function handleRequest(event) {
         let slug = path[path.length - 1];
         // console.log(slug);
 
-        const post = await blog.getSinglePost(id, slug);
+        const post = await blog.getSinglePost(id, url.host, slug);
 
         if (!post) {
             //TODO return a 302 to /
