@@ -32,4 +32,10 @@ module.exports = {
       URL: "core-js/web/url",
     }),
   ],
+  // Redirecting module requests
+  resolve: {
+    fallback: {
+      fs: false,
+    },
+  },
 };
